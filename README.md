@@ -1,6 +1,6 @@
 <p align=center><a href="https://github.com/wip/app/tree/master/assets"><img src="https://github.com/wip/app/raw/master/assets/wip-logo.png" alt="" width="200" height="200"></a></p>
 
-<h1 align="center">DO NOT MERGE – The Action!</h1>
+<h1 align="center">DO NOT MERGE – as an action./h1>
 
 <p align="center">
   <a href="https://travis-ci.com/wip/app" rel="nofollow"><img alt="Build Status" src="https://travis-ci.com/wip/app.svg?branch=master"></a>
