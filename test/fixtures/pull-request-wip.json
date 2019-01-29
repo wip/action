@@ -1,0 +1,24 @@
+{
+  "action": "opened",
+  "pull_request": {
+    "title": "[WIP] Test",
+    "number": 1,
+    "head": {
+      "sha": "sha123"
+    },
+    "labels": []
+  },
+  "repository": {
+    "id": 1,
+    "name": "app",
+    "full_name": "wip/app",
+    "private": false,
+    "owner": {
+      "id": 1,
+      "login": "wip"
+    }
+  },
+  "installation": {
+    "id": 1
+  }
+}
