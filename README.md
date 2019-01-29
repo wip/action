@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://travis-ci.com/wip/app" rel="nofollow"><img alt="Build Status" src="https://travis-ci.com/wip/app.svg?branch=master"></a>
   <a href="https://greenkeeper.io/" rel="nofollow"><img src="https://badges.greenkeeper.io/wip/app.svg" alt="Greenkeeper badge"></a>
+   <a href="https://github-actions.netlify.com/wip" rel="nofollow"><img src="https://img.shields.io/badge/listed%20on-GitHubActions-blue.svg" alt="GithubAction badge"></a>
 </p>
 
 This GitHub Action sets a pull request status to pending if the title includes "WIP".
