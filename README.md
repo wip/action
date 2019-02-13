@@ -9,7 +9,7 @@
 
 This GitHub Action sets a pull request status to pending if the title includes "WIP".
 
-An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd> tab when creating a new action and paste the code below):
+An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd> tab when creating a new workflow and paste the code below):
 
 ```workflow
 workflow "Set status on pull_request" {
