@@ -13,13 +13,14 @@ An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd>
 
 ```workflow
 on: [pull_request]
-	name: "Set status on pull_request"
-	jobs:
-	    wip:
-	        name: "Set status"
-	        runs-on: ubuntu-latest
-	        steps:
-	            - uses: wip/action@master
+name: "Set status on pull_request"
+
+jobs:
+  wip:
+  name: "Set status"
+  runs-on: ubuntu-latest
+  steps:
+    - uses: wip/action@master
 ```
 
 ## License
