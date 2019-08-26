@@ -12,15 +12,14 @@ This GitHub Action sets a pull request status to pending if the title includes "
 An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd> tab when creating a new workflow and paste the code below):
 
 ```workflow
-workflow "Set status on pull_request" {
-  on = "pull_request"
-  resolves = ["Set status"]
-}
-
-action "Set status" {
-  uses = "wip/action@master"
-  secrets = ["GITHUB_TOKEN"]
-}
+on: [pull_request]
+	name: "Set status on pull_request"
+	jobs:
+	    psalm:
+	        name: "Set status"
+	        runs-on: ubuntu-latest
+	        steps:
+	            - uses: wip/action@master
 ```
 
 ## License
