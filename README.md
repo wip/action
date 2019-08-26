@@ -15,7 +15,7 @@ An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd>
 on: [pull_request]
 	name: "Set status on pull_request"
 	jobs:
-	    psalm:
+	    wip:
 	        name: "Set status"
 	        runs-on: ubuntu-latest
 	        steps:
