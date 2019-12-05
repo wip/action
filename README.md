@@ -23,6 +23,10 @@ jobs:
     - uses: wip/action@master
 ```
 
+## Contributing
+
+I don't plan to add more features to it. It's only 10 lines of code, a great reference action to build one that matches your needs :)
+
 ## License
 
 [MIT](LICENSE)
