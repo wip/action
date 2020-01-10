@@ -13,7 +13,9 @@ An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd>
 
 ```yml
 name: WIP
-on: pull_request
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened, edited ]
 
 jobs:
   wip:
