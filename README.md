@@ -12,15 +12,19 @@ This GitHub Action sets a pull request status to pending if the title includes "
 An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd> tab when creating a new workflow and paste the code below):
 
 ```yml
-on: [pull_request]
-name: "Set status on pull_request"
+name: Set PR review status
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened, edited ]
 
 jobs:
   wip:
-  name: "Set status"
-  runs-on: ubuntu-latest
-  steps:
-    - uses: wip/action@master
+    name: Set WIP status
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: wip/action@master
 ```
 
 ## Contributing
