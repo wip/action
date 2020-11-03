@@ -1,14 +1,18 @@
-const { Toolkit } = require('actions-toolkit')
-const { context, github: { request } } = new Toolkit()
+const { Octokit } = require("@octokit/action");
+const payload = require(process.env.GITHUB_EVENT_PATH);
 
-const isWip = /\bwip\b/i.test(context.payload.pull_request.title)
-const newStatus = isWip ? 'pending' : 'success'
+const isWip = /\bwip\b/i.test(payload.pull_request.title);
+const octokit = new Octokit();
 
 // https://developer.github.com/v3/repos/statuses/#create-a-status
-request('POST /repos/:owner/:repo/statuses/:sha', context.repo({
-  sha: context.payload.pull_request.head.sha,
-  state: newStatus,
-  target_url: 'https://github.com/wip/action',
-  description: isWip ? 'work in progress' : 'ready for review',
-  context: 'WIP (action)'
-}))
+octokit
+  .request("POST /repos/:owner/:repo/statuses/:sha", {
+    owner: payload.repository.owner.login,
+    repo: payload.repository.name,
+    sha: payload.pull_request.head.sha,
+    state: isWip ? "pending" : "success",
+    target_url: "https://github.com/wip/action",
+    description: isWip ? "work in progress" : "ready for review",
+    context: "WIP (action)",
+  })
+  .catch(console.error);

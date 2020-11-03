@@ -1,0 +1,8 @@
+name: WIP
+description: "DO NOT MERGE – as an action"
+branding:
+  icon: "alert-triangle"
+  color: yellow
+runs:
+  using: "node12"
+  main: "dist/index.js"
