@@ -15,23 +15,23 @@ An example workflow looks like this (switch to the <kbd>`<> Edit new file`</kbd>
 name: WIP
 on:
   pull_request:
-    types: [ opened, synchronize, reopened, edited ]
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   wip:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: wip/action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 Then to prevent PRs from being merged, enable the `WIP (action)` status check in your Settings > Branch > [Branch Name] > Protect matching branches > Require status checks to pass before merging
- 
+
 ## Contributing
 
 I don't plan to add more features to it. It's only 10 lines of code, a great reference action to build one that matches your needs :)
 
 ## License
 
-[MIT](LICENSE)
+[Apache 2.0](LICENSE)
