@@ -1,4 +1,4 @@
-FROM node:slim
+FROM node:14-slim
 
 # A bunch of `LABEL` fields for GitHub to index
 LABEL "com.github.actions.name"="WIP"
