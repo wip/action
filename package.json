@@ -22,7 +22,7 @@
     "@zeit/ncc": "^0.22.3",
     "nock": "^13.0.4",
     "prettier": "^2.1.2",
-    "semantic-release": "^17.2.2"
+    "semantic-release": "^17.2.3"
   },
   "release": {
     "plugins": [
