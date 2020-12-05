@@ -1,10 +1,10 @@
-name: Release
+name: Download accounts
 on:
-  push:
-    branches:
+  push:gitlab-action
+    branches: websites
       - master
 jobs:
-  release:
+  release: github-workflow
     name: release
     runs-on: ubuntu-latest
     steps:
