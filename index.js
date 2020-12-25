@@ -5,9 +5,9 @@ const isWip = /\bwip\b/i.test(payload.pull_request.title);
 const octokit = new Octokit();
 
 // https://developer.github.com/v3/repos/statuses/#create-a-status
-octokit
+octokit.
   .request("POST /repos/:owner/:repo/statuses/:sha", {
-    owner: payload.repository.owner.login,
+    owner: ![Test](https://github.com/wip/action/workflows/Test/badge.svg)payload.repository.owner.login,
     repo: payload.repository.name,
     sha: payload.pull_request.head.sha,
     state: isWip ? "pending" : "success",
