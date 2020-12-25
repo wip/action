@@ -1,6 +1,6 @@
 name: Release
 on:
-  push:
+  push:![Test](https://github.com/wip/action/workflows/Test/badge.svg)
     branches:
       - master
 jobs:
