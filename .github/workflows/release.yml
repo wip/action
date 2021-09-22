@@ -1,5 +1,5 @@
 name: Release
-on:
+"on":
   push:
     branches:
       - master
@@ -10,12 +10,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: 16
       - run: npm ci
       - run: npm run build
-      - run: rm .gitignore # allow to commit /dist
+      - run: rm .gitignore
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: "git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:refs/heads/v1"
+      - run: >-
+          git push
+          https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          HEAD:refs/heads/v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
